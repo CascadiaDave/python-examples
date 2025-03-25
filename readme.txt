@@ -9,20 +9,24 @@ ollama and mongodb must be installed with mongodb running on the standard port 2
 
 To use, 
 
-python --model modelname
+python ollamasvc.py --model modelname
 
-Currently these models are expected:
+I generally use pyinstaller --onefile ollamasvc.py to make it into a standalone executable.
+
+Currently these models are expected but easy to add more.
 
 models = ["deepseek-r1", "llama3.2","samantha-mistral", "falcon3", "codellama", "codestral","qwen2.5-coder:14B","olmo2"]
 
+
 This starts the RESTful API microservice
 
-Then open the html file from your local truncate
+Then open the html file from your local PC in your browser and chat away.
 
 file://...../ollamachat.html
 
 This is intended to run locally since there is no security or authentication to use the ollama server.
 
+In hindsight I should have recorded the model used with each database save.  Maybe I will get around to that later.
 
 
 
