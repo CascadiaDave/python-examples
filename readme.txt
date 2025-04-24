@@ -7,6 +7,8 @@ query history, with the ability to delete some or all of past queries.
 
 ollama and mongodb must be installed with mongodb running on the standard port 27017.  These Python modules are required:
 
+mkdb.py can be used to make the initial database.
+
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from bson.objectid import ObjectId
