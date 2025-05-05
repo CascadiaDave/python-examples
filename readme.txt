@@ -5,9 +5,11 @@ save queries and responses to ollama queries. It runs on port 50001
 ollamachat.html is a javascript driven web page that displays a prompt box for new AI chat queries, and the
 query history, with the ability to delete some or all of past queries.
 
-ollama and mongodb must be installed with mongodb running on the standard port 27017.  These Python modules are required:
+ollama and mongodb must be installed with mongodb running on the standard port 27017.
 
 mkdb.py can be used to make the initial database.
+
+These Python modules are required and some may require an npm install
 
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
@@ -28,7 +30,6 @@ I generally use pyinstaller --onefile ollamasvc.py to make it into a standalone 
 Currently these models are expected but easy to add more.
 
 models = ["deepseek-r1", "llama3.2","samantha-mistral", "falcon3", "codellama", "codestral","qwen2.5-coder:14B","olmo2"]
-
 
 This starts the RESTful API microservice
 
